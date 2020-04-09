@@ -1,0 +1,463 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "unifyed-integration",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://kryptosda.kryptosmobile.com/kryptosds/services/student",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/bannerholds": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Holds",
+        "description": "This app displays a student’s holds. The hold type must be Web-enabled, and the hold must be in effect (that is, the current date is within the date range specified on the Hold Information Form [SOAHOLD] for the student) to display the holds.",
+        "operationId": "Holds",
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannertermdropdown": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Midterm Grades Term Dropdown",
+        "description": "This app displays the mid term grades of the student for a selected term. Term codes available all terms for which the student has an active registration and at least one mid term grade.",
+        "operationId": "MidtermGradesTermDropdown",
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannermidtermgrade": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Midterm Grades",
+        "description": "This app displays the mid term grades of the student for a selected term. Term codes available all terms for which the student has an active registration and at least one mid term grade. The user must select a term from the ‘Term’ dropdown to display the mid term grades for that term.",
+        "operationId": "MidtermGrades",
+        "parameters": [
+          {
+            "name": "termCode",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "\"\""
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannerfinalgradetermdropdown": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Final Grades Term Dropdown",
+        "description": "This app displays a student’s final grades that have been rolled to Academic History for the selected term.",
+        "operationId": "FinalGradesTermDropdown",
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unidfyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannerfinalgrade": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Final Grades",
+        "description": "This app displays a student’s final grades that have been rolled to Academic History for the selected term.",
+        "operationId": "FinalGrades",
+        "parameters": [
+          {
+            "name": "termCode",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "\"\""
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannertermswithaccountsummary": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Account Summary Term Dropdown",
+        "description": "This app displays student account balance term dropdown information summarized by detail code.",
+        "operationId": "AccountSummaryTermDropdown",
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/banneraccountsummary": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Account Summary",
+        "description": "This app displays student account balance information summarized by detail code.",
+        "operationId": "AccountSummary",
+        "parameters": [
+          {
+            "name": "termCode",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "\"\""
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannerblockTranscriptsGrades": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Academic Transcript Term DropDown",
+        "description": "This app displays an Term DropDown for unofficial transcript, based on the rules for the selected transcript level and type.",
+        "operationId": "AcademicTranscriptTermDropDown",
+        "parameters": [
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannertranscripts": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Academic Transcript",
+        "description": "This app displays an unofficial transcript, based on the rules for the selected transcript level and type.",
+        "operationId": "AcademicTranscript",
+        "parameters": [
+          {
+            "name": "level",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "\"\""
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannerfinaidstudentrequirements": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Financial Aid Documents Received",
+        "operationId": "FinancialAidDocumentsReceived",
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "undefined"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannerfinaidawardoverview": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Financial Aid Awards",
+        "operationId": "FinancialAidAwards",
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "undefined"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/bannerfinaidaccountsummarybyterm": {
+      "get": {
+        "tags": [
+          "Banner Middleware Service"
+        ],
+        "summary": "Financial Aid Documents Received Account Summary",
+        "operationId": "FinancialAidDocumentsReceivedAccountSummary",
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "undefined"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "description": "Tenant id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "unifyeddev"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Banner Middleware Service",
+      "description": "Student Information System (Banner) In order to enable your AI Assistant to respond with information from coming from your SIS (such as Financial Aid, Admissions, Scheduling, and more."
+    }
+  ]
+}
